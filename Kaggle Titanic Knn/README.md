@@ -133,16 +133,7 @@ colSums(is.na(merge1))
 
 ``` r
 df <- merge1[-c(1,4,9,11)]
-head(df)
 ```
-
-<div data-pagedtable="false">
-
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Survived"],"name":[1],"type":["int"],"align":["right"]},{"label":["Pclass"],"name":[2],"type":["int"],"align":["right"]},{"label":["Sex"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Age"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["SibSp"],"name":[5],"type":["int"],"align":["right"]},{"label":["Parch"],"name":[6],"type":["int"],"align":["right"]},{"label":["Fare"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Embarked"],"name":[8],"type":["chr"],"align":["left"]}],"data":[{"1":"0","2":"3","3":"0","4":"22.00000","5":"1","6":"0","7":"7.2500","8":"S","_rn_":"1"},{"1":"1","2":"1","3":"1","4":"38.00000","5":"1","6":"0","7":"71.2833","8":"C","_rn_":"2"},{"1":"1","2":"3","3":"1","4":"26.00000","5":"0","6":"0","7":"7.9250","8":"S","_rn_":"3"},{"1":"1","2":"1","3":"1","4":"35.00000","5":"1","6":"0","7":"53.1000","8":"S","_rn_":"4"},{"1":"0","2":"3","3":"0","4":"35.00000","5":"0","6":"0","7":"8.0500","8":"S","_rn_":"5"},{"1":"0","2":"3","3":"0","4":"25.48133","5":"0","6":"0","7":"8.4583","8":"Q","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-
-</div>
 
 ``` r
 str(df)
@@ -164,16 +155,8 @@ df$Embarked[which(df$Embarked=='C')] <- 0
 df$Embarked[which(df$Embarked=='Q')] <- 1
 df$Embarked[which(df$Embarked=='S')] <- 2
 df$Embarked <- as.numeric(df$Embarked)
-head(df)
+
 ```
-
-<div data-pagedtable="false">
-
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Survived"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["Pclass"],"name":[2],"type":["int"],"align":["right"]},{"label":["Sex"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Age"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["SibSp"],"name":[5],"type":["int"],"align":["right"]},{"label":["Parch"],"name":[6],"type":["int"],"align":["right"]},{"label":["Fare"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Embarked"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"0","2":"3","3":"0","4":"22.00000","5":"1","6":"0","7":"7.2500","8":"2","_rn_":"1"},{"1":"1","2":"1","3":"1","4":"38.00000","5":"1","6":"0","7":"71.2833","8":"0","_rn_":"2"},{"1":"1","2":"3","3":"1","4":"26.00000","5":"0","6":"0","7":"7.9250","8":"2","_rn_":"3"},{"1":"1","2":"1","3":"1","4":"35.00000","5":"1","6":"0","7":"53.1000","8":"2","_rn_":"4"},{"1":"0","2":"3","3":"0","4":"35.00000","5":"0","6":"0","7":"8.0500","8":"2","_rn_":"5"},{"1":"0","2":"3","3":"0","4":"25.48133","5":"0","6":"0","7":"8.4583","8":"1","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-
-</div>
 
 먼저 학습에 연관이 없을 것 같은 1번 4번 9번 11번 컬럼을 제외하고 df프레임을 새로 생성한다. Knn학습을 위해 타겟이
 되는 Survived 컬럼을 factor로 전환 시켜주고, Embarked컬럼 값들을 numeric요소로 전환시켜준다.
@@ -220,7 +203,8 @@ write.csv(resultdata, "result_submission.csv", row.names = F)
 
 ## Result
 
-![](C:/Users/Seunggi/Desktop/result.JPG)  
+![](C:/Users/Seunggi/Desktop/result.JPG)
+
 위 사진은 완성된 결과csv파일을 Kaggle에 업로드 하여 얻어낸 정확도 이다. 비교적 나쁘지 않은 수준의 결과를 얻어낸 것을
 확인 할 수 있고, 이번 테스트를 진행하면서 결측값등 데이터 전처리 과정이 모델을 만들에 큰 영향을 미치는 것을 확인 할 수
 있었다.  
