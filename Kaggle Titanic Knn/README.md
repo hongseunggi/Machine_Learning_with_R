@@ -26,14 +26,6 @@ Merge한 데이터셋에 결측값를 확인 하는 과정을 진행하여 전�
 head(merge1)
 ```
 
-<div data-pagedtable="false">
-
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["PassengerId"],"name":[1],"type":["int"],"align":["right"]},{"label":["Survived"],"name":[2],"type":["int"],"align":["right"]},{"label":["Pclass"],"name":[3],"type":["int"],"align":["right"]},{"label":["Name"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Sex"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["Age"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["SibSp"],"name":[7],"type":["int"],"align":["right"]},{"label":["Parch"],"name":[8],"type":["int"],"align":["right"]},{"label":["Ticket"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Fare"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Cabin"],"name":[11],"type":["chr"],"align":["left"]},{"label":["Embarked"],"name":[12],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"0","3":"3","4":"Braund, Mr. Owen Harris","5":"male","6":"22","7":"1","8":"0","9":"A/5 21171","10":"7.2500","11":"","12":"S","_rn_":"1"},{"1":"2","2":"1","3":"1","4":"Cumings, Mrs. John Bradley (Florence Briggs Thayer)","5":"female","6":"38","7":"1","8":"0","9":"PC 17599","10":"71.2833","11":"C85","12":"C","_rn_":"2"},{"1":"3","2":"1","3":"3","4":"Heikkinen, Miss. Laina","5":"female","6":"26","7":"0","8":"0","9":"STON/O2. 3101282","10":"7.9250","11":"","12":"S","_rn_":"3"},{"1":"4","2":"1","3":"1","4":"Futrelle, Mrs. Jacques Heath (Lily May Peel)","5":"female","6":"35","7":"1","8":"0","9":"113803","10":"53.1000","11":"C123","12":"S","_rn_":"4"},{"1":"5","2":"0","3":"3","4":"Allen, Mr. William Henry","5":"male","6":"35","7":"0","8":"0","9":"373450","10":"8.0500","11":"","12":"S","_rn_":"5"},{"1":"6","2":"0","3":"3","4":"Moran, Mr. James","5":"male","6":"NA","7":"0","8":"0","9":"330877","10":"8.4583","11":"","12":"Q","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-
-</div>
-
 ``` r
 str(merge1)
 ```
