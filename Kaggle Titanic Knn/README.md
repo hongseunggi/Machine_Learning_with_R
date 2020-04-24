@@ -203,7 +203,7 @@ write.csv(resultdata, "result_submission.csv", row.names = F)
 
 ## Result
 
-![](C:/Users/Seunggi/Desktop/result.JPG)
+![image](https://user-images.githubusercontent.com/46149624/80194019-bc22e600-8654-11ea-9e11-d6f3f421bcd7.png)
 
 위 사진은 완성된 결과csv파일을 Kaggle에 업로드 하여 얻어낸 정확도 이다. 비교적 나쁘지 않은 수준의 결과를 얻어낸 것을
 확인 할 수 있고, 이번 테스트를 진행하면서 결측값등 데이터 전처리 과정이 모델을 만들에 큰 영향을 미치는 것을 확인 할 수
